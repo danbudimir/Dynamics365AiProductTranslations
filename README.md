@@ -13,7 +13,7 @@ This enhancement will use Microsoft AI to translate the name and description of 
 1. The AI endpoint Uri, typically in this format **https://my-aistudio.cognitiveservices.azure.com/**
 2. The deployment you want to use
 3. The secret key for the deployment (typically we'd use a key vault to store this but did not for the POC)
-4. A comma separated list of language codes to translate the base language into.
+4. A comma separated list of language codes to translate the base language into
 
 ![image.png](Images/image-5152fb5b-44b1-43b4-a0a1-c628a7960bf5.png)
 
