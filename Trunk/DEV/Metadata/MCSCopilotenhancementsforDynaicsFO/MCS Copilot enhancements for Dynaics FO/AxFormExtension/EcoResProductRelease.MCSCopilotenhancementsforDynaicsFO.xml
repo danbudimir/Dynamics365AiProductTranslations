@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>EcoResProductRelease.MCSCopilotenhancementsforDynaicsFO</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlct2h11dl1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormImageControl">
+				<Name>FormImageControl1</Name>
+				<Type>Image</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<ImageLocation>AOTResource</ImageLocation>
+				<NormalImage>McsAiCoPilot</NormalImage>
+			</FormControl>
+			<Parent>FinishBody</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlmr5v2sg01</Name>
+			<FormControl xmlns=""
+				i:type="AxFormStaticTextControl">
+				<Name>McsAiFormStaticTextCoPilot</Name>
+				<AutoDeclaration>Yes</AutoDeclaration>
+				<Type>StaticText</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Style>FormCaption</Style>
+				<Text></Text>
+			</FormControl>
+			<Parent>FinishBody</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications>
+		<AxPropertyModification xmlns="">
+			<Name>Pattern</Name>
+			<Value>Custom</Value>
+		</AxPropertyModification>
+	</PropertyModifications>
+</AxFormExtension>

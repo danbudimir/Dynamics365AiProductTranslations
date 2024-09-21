@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>MCS Copilot enhancements for Dynaics FO</Model>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{444adeab-65f5-4e4d-8c75-b48c50d8706e}</ProjectGuid>
+    <Name>McsProductReleaseCopilotCreateTranslations</Name>
+    <RootNamespace>McsProductReleaseCopilotCreateTranslations</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIRef\AIRef.csproj">
+      <Name>AIRef</Name>
+      <Project>{d08e7c7e-64c1-449b-b144-56a6b0b09ae3}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\McsAiEcoResProductReleaseManagerBase_Extension">
+      <SubType>Content</SubType>
+      <Name>McsAiEcoResProductReleaseManagerBase_Extension</Name>
+      <Link>Classes\McsAiEcoResProductReleaseManagerBase_Extension</Link>
+    </Content>
+    <Content Include="AxClass\McsAiUtil">
+      <SubType>Content</SubType>
+      <Name>McsAiUtil</Name>
+      <Link>Classes\McsAiUtil</Link>
+    </Content>
+    <Content Include="AxFormExtension\EcoResProductRelease.MCSCopilotenhancementsforDynaicsFO">
+      <SubType>Content</SubType>
+      <Name>EcoResProductRelease.MCSCopilotenhancementsforDynaicsFO</Name>
+      <Link>Form Extensions\EcoResProductRelease.MCSCopilotenhancementsforDynaicsFO</Link>
+    </Content>
+    <Content Include="AxFormExtension\SystemParameters.MCSCopilotenhancementsforDynaicsFO">
+      <SubType>Content</SubType>
+      <Name>SystemParameters.MCSCopilotenhancementsforDynaicsFO</Name>
+      <Link>Form Extensions\SystemParameters.MCSCopilotenhancementsforDynaicsFO</Link>
+    </Content>
+    <Content Include="AxResource\McsAiCoPilot">
+      <SubType>Content</SubType>
+      <Name>McsAiCoPilot</Name>
+      <Link>Resources\McsAiCoPilot</Link>
+    </Content>
+    <Content Include="AxTableExtension\SystemParameters.MCSCopilotenhancementsforDynaicsFO">
+      <SubType>Content</SubType>
+      <Name>SystemParameters.MCSCopilotenhancementsforDynaicsFO</Name>
+      <Link>Table Extensions\SystemParameters.MCSCopilotenhancementsforDynaicsFO</Link>
+    </Content>
+    <Content Include="icons8-microsoft-copilot-96.png">
+      <SubType>Content</SubType>
+      <Name>icons8-microsoft-copilot-96.png</Name>
+      <DependentUpon>AxResource\McsAiCoPilot</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form Extensions\" />
+    <Folder Include="Classes" />
+    <Folder Include="Resources\" />
+    <Folder Include="Table Extensions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>

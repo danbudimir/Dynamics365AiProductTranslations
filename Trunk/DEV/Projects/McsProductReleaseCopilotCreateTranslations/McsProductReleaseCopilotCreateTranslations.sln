@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "McsProductReleaseCopilotCreateTranslations (USR) [MCS Copilot enhancements for Dynaics FO]", "McsProductReleaseCopilotCreateTranslations\McsProductReleaseCopilotCreateTranslations.rnrproj", "{444ADEAB-65F5-4E4D-8C75-B48C50D8706E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIRef", "AIRef\AIRef.csproj", "{D08E7C7E-64C1-449B-B144-56A6B0B09AE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{84299889-D545-4609-A757-DA106B04BD5F}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.txt = Notes.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{444ADEAB-65F5-4E4D-8C75-B48C50D8706E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444ADEAB-65F5-4E4D-8C75-B48C50D8706E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444ADEAB-65F5-4E4D-8C75-B48C50D8706E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{444ADEAB-65F5-4E4D-8C75-B48C50D8706E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D08E7C7E-64C1-449B-B144-56A6B0B09AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08E7C7E-64C1-449B-B144-56A6B0B09AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08E7C7E-64C1-449B-B144-56A6B0B09AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08E7C7E-64C1-449B-B144-56A6B0B09AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F807841-0F97-43B4-B990-B51557A31F2B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/mcsd365
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = McsProductReleaseCopilotCreateTranslations\\McsProductReleaseCopilotCreateTranslations.rnrproj
+		SccProjectName1 = McsProductReleaseCopilotCreateTranslations
+		SccLocalPath1 = McsProductReleaseCopilotCreateTranslations
+		SccProjectUniqueName2 = AIRef\\AIRef.csproj
+		SccProjectName2 = AIRef
+		SccLocalPath2 = AIRef
+	EndGlobalSection
+EndGlobal

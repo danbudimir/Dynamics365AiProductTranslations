@@ -1,0 +1,16 @@
+For AIRef Azure.AI.OpenAI reference 
+
+From package manager console
+
+Go to Tools-Options, then NuGet Package manager->Package Sources
+Add a new source
+Name: NuGet.org
+Source: https://api.nuget.org/v3/index.json
+
+Launch package manager console, change the package source to NuGet.org, be sure the AIRef project is selected in Solution explorer.
+
+Run
+PM> NuGet\Install-Package Azure.AI.OpenAI -Version 2.0.0-beta.3
+
+I chose 2.0.0-beta.3 because it was the latest at the time, choose whatever makes sense to you.
+

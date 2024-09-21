@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>McsAiUtil</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class McsAiUtil
+{
+    
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>EcoResProductRelease_OnInitialized</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [FormEventHandler(formStr(EcoResProductRelease), FormEventType::Initialized)]
+    public static void EcoResProductRelease_OnInitialized(xFormRun sender, FormEventArgs e)
+    {
+        str langs = SystemParameters::find().McsAiProductTranslationLanguages;
+        FormStaticTextControl control;
+        control = sender.design().controlName(identifierStr("McsAiFormStaticTextCoPilot"));
+        control.text(strFmt('Dynamic translation to %1 provided by Copilot.', langs));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

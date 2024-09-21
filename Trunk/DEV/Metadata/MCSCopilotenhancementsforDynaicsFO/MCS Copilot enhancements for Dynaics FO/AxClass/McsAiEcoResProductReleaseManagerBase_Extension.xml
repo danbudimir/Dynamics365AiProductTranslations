@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>McsAiEcoResProductReleaseManagerBase_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(ClassStr(EcoResProductReleaseManagerBase))]
+final class McsAiEcoResProductReleaseManagerBase_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>releaseProduct</Name>
+				<Source><![CDATA[
+    public static void releaseProduct(
+        EcoResProductRecId  _productRecId,
+        RefRecId            _legalEntityId)
+    {
+        Next releaseProduct(_productRecId, _legalEntityId);
+        EcoResProductReleaseManagerBase::getTranslations(_productRecId);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getTranslations</Name>
+				<Source><![CDATA[
+    public static void getTranslations(EcoResProductRecId  _productRecId)
+    {
+        EcoResProductTranslation trans;
+
+
+        SystemLanguageId baseLangId = CompanyInfo::languageId();
+        SystemParameters params = SystemParameters::find();
+        //string toLangs, string endpoint, string key, string deployment)
+        select Description,Name from trans where trans.Product == _productRecId;
+        str vals = AIRef.Translator::Translate(baseLangId, trans.Name, trans.Description
+            ,params.McsAiProductTranslationLanguages, 
+            params.McsAiEndPoint,params.McsAiEndPointKey,params.McsAiEndPointDeployment);
+        List lst = strSplit(vals, '\n');
+        ListIterator iterator = new ListIterator(lst);
+        while(iterator.more())
+        {
+            List segments = strSplit(iterator.value(),'|');
+            ListEnumerator segmentsIterator = segments.getEnumerator();
+            segmentsIterator.moveNext();
+            str languageId = strRTrim(strLTrim(segmentsIterator.current()));
+            segmentsIterator.moveNext();
+            str name = strRTrim(strLTrim(segmentsIterator.current()));
+            segmentsIterator.moveNext();
+            str description = strRTrim(strLTrim(segmentsIterator.current()));
+            
+            EcoResProductTranslation::createOrUpdateTranslation(_productRecId,name,description,languageId);
+
+            iterator.next();
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

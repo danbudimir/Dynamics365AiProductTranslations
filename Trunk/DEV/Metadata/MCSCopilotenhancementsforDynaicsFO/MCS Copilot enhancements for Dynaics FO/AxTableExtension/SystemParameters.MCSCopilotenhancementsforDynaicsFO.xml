@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxTableExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SystemParameters.MCSCopilotenhancementsforDynaicsFO</Name>
+	<FieldGroupExtensions />
+	<FieldGroups />
+	<FieldModifications />
+	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>McsAiEndPoint</Name>
+			<HelpText>e.g. https://foo.openai.azure.com/</HelpText>
+			<Label>MCS AI Endpoint Uri</Label>
+			<StringSize>100</StringSize>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>McsAiEndPointKey</Name>
+			<HelpText>This is the key provided for your endpoint whenlooking at the All Azure OpenAI &amp; AI Service resources&#xD;
+ page.</HelpText>
+			<Label>MCS AI endpoint key</Label>
+			<StringSize>50</StringSize>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>McsAiEndPointDeployment</Name>
+			<HelpText>The name of the deployment you want to use from your Azure OpenAI resource.  e.g. gpt-35-turbo</HelpText>
+			<Label>MCS AI endpoint deployment</Label>
+			<StringSize>25</StringSize>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>McsAiProductTranslationLanguages</Name>
+			<HelpText>A comma separated list of language Ids to translate to at product release</HelpText>
+			<Label>MCS AI Product translation languages</Label>
+			<StringSize>100</StringSize>
+		</AxTableField>
+	</Fields>
+	<FullTextIndexes />
+	<Indexes />
+	<Mappings />
+	<PropertyModifications />
+	<RelationExtensions />
+	<RelationModifications />
+	<Relations />
+</AxTableExtension>
